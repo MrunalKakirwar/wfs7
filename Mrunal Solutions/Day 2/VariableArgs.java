@@ -11,9 +11,9 @@ public class VariableArgs {
 			}
 			
 			int sub(int ...a){
-				int b=0;
-				for(int i : a)
-					b = i - b;
+				int b=a[0];
+				for(int i=1; i<a.length;i++)
+					b -=a[i];
 				
 				return b;
 			}
